@@ -7,7 +7,8 @@
         </div>
       </div>
       <div class="row">
-        <div class="col" align="center">
+        <div class="col-lg-3 col-md-2 col-sm-1" align="center"></div>
+        <div class="col-lg-6 col-md-8 col-sm-10" align="center">
           <p class="quienes-somos-description">La Manada se trata sobre la unidad y el sentido de pertencencia. 
           Aquella fuerza que genera el grupo para enfrentar cualquier cosa. 
           Asi también como la empatía y la habilidad de complementarse los unos a los otros.
@@ -15,6 +16,7 @@
           cabo todos nuestros desafíos.
           Apoyándonos entre nosotros y complementándonos.</p>
         </div>
+        <div class="col-lg-3 col-md-2 col-sm-1" align="center"></div>
       </div>
     </div>
   </div>
@@ -52,7 +54,7 @@ export default {
 }
 
 .quienes-somos-description {
-  width: 50%;
+  width: 100%;
   font-weight: 600;
 }
 
