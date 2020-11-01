@@ -47,13 +47,13 @@ export default {
 }
 
 .quienes-somos-title {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 800;
 }
 
 .quienes-somos-description {
   width: 55%;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 600;
 }
 

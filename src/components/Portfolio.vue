@@ -1,21 +1,61 @@
 <template>
   <div class="section-portfolio">
       <div class="opacity-portfolio row">
-        <div class="col quienes-somos-title">
+        <div class="col portfolio-title">
           PORTFOLIO
         </div>
       </div>
       <div class="portfolio-section portfolio-section-3d">
-        <br><br>3D
+        <br><br><span v-b-toggle.collapse-3d>3D</span>
+        <b-collapse id="collapse-3d">
+          <small>
+          Trabajo 1<br>
+          Trabajo 2<br>
+          Trabajo 3<br>
+          Trabajo 4<br>
+          Trabajo 5<br>
+          ...
+          </small>
+      </b-collapse>
       </div>
       <div class="portfolio-section portfolio-section-ilustracion">
-       <br><br> ILUSTRACIÓN
+       <br><br><span v-b-toggle.collapse-ilustracion>ILUSTRACIÓN</span>
+       <b-collapse id="collapse-ilustracion">
+          <small>
+          Trabajo 1<br>
+          Trabajo 2<br>
+          Trabajo 3<br>
+          Trabajo 4<br>
+          Trabajo 5<br>
+          ...
+          </small>
+      </b-collapse>
       </div>
       <div class="portfolio-section portfolio-section-marketing-digital">
-       <br><br> MARKETING DIGITAL
+       <br><br><span v-b-toggle.collapse-marketing-digital>MARKETING DIGITAL</span>
+       <b-collapse id="collapse-marketing-digital">
+          <small>
+          Trabajo 1<br>
+          Trabajo 2<br>
+          Trabajo 3<br>
+          Trabajo 4<br>
+          Trabajo 5<br>
+          ...
+          </small>
+      </b-collapse>
       </div>
       <div class="portfolio-section portfolio-section-motion-graphics">
-       <br><br> MOTION GRAPHICS
+       <br><br><span v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span>
+       <b-collapse id="collapse-motion-graphics">
+          <small>
+          Trabajo 1<br>
+          Trabajo 2<br>
+          Trabajo 3<br>
+          Trabajo 4<br>
+          Trabajo 5<br>
+          ...
+          </small>
+      </b-collapse>
       </div>
   </div>
 </template>
@@ -44,18 +84,13 @@ export default {
   opacity: 0.6;
 }
 
-.quienes-somos-title {
-  font-size: 1cm;
+.portfolio-title {
+  font-size: 3em;
   font-weight: 800;
 }
 
-.quienes-somos-description {
-  width: 30%;
-  font-weight: 600;
-}
-
 .portfolio-section {
-  height: 7em;
+  min-height: 7em;
   color:white;
   font-size: 2em;
   font-weight: 800;
