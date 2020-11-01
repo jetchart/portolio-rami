@@ -6,7 +6,7 @@
         </div>
       </div>
       <div class="portfolio-section portfolio-section-3d">
-        <br><br><span v-b-toggle.collapse-3d>3D</span>
+        <br><br><span class="portfolio-item-description" v-b-toggle.collapse-3d>3D</span>
         <b-collapse id="collapse-3d">
           <small>
           Trabajo 1<br>
@@ -19,7 +19,7 @@
       </b-collapse>
       </div>
       <div class="portfolio-section portfolio-section-ilustracion">
-       <br><br><span v-b-toggle.collapse-ilustracion>ILUSTRACIÓN</span>
+       <br><br><span class="portfolio-item-description" v-b-toggle.collapse-ilustracion>ILUSTRACIÓN</span>
        <b-collapse id="collapse-ilustracion">
           <small>
           Trabajo 1<br>
@@ -32,7 +32,7 @@
       </b-collapse>
       </div>
       <div class="portfolio-section portfolio-section-marketing-digital">
-       <br><br><span v-b-toggle.collapse-marketing-digital>MARKETING DIGITAL</span>
+       <br><br><span class="portfolio-item-description" v-b-toggle.collapse-marketing-digital>MARKETING DIGITAL</span>
        <b-collapse id="collapse-marketing-digital">
           <small>
           Trabajo 1<br>
@@ -45,7 +45,7 @@
       </b-collapse>
       </div>
       <div class="portfolio-section portfolio-section-motion-graphics">
-       <br><br><span v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span>
+       <br><br><span class="portfolio-item-description" v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span>
        <b-collapse id="collapse-motion-graphics">
           <small>
           Trabajo 1<br>
@@ -114,6 +114,13 @@ export default {
 
 .portfolio-section-motion-graphics {
   background-color:rgba(37, 44, 99, 0.979);
+}
+
+.portfolio-item-description {
+  transition: font-size 0.15s linear;
+}
+.portfolio-item-description:hover{
+   font-size: 1.2em;
 }
 
 </style>
