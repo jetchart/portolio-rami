@@ -2,7 +2,7 @@
   <div id="app" class="all-window">
     <div><Header></Header></div>
     <div>
-      <div id="reel"><Reel></Reel></div>
+      <div id="reel" class="transition-opacity"><Reel></Reel></div>
       <div>
         <div id="quienes-somos" class="row section"><QuienesSomos></QuienesSomos></div>
         <div id="portfolio" class="row section"><Portfolio></Portfolio></div>
@@ -47,6 +47,38 @@ export default {
 .section {
   width: 100%;
   margin: 0px;
+}
+
+/*.slideinleft {
+  animation-duration: 3s;
+  animation-name: slideinleftkf;
+}
+
+@keyframes slideinleftkf {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}*/
+
+.transition-opacity {
+  animation-duration: 1s;
+  animation-name: transition-opacity;
+}
+
+@keyframes transition-opacity {
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;
+  }
 }
 
 .no-margin {
