@@ -1,6 +1,6 @@
 <template>
   <div class="section-portfolio">
-      <div class="opacity-portfolio row">
+      <div class="opacity-portfolio portfolio row">
         <div class="col portfolio-title">
           PORTFOLIO
         </div>
@@ -73,6 +73,10 @@ export default {
 </script>
 
 <style>
+
+.portfolio {
+  margin: 0px !important;
+}
 
 .section-portfolio {
   width: 100%;
