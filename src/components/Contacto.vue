@@ -3,7 +3,7 @@
     <div>
       <div class="row">
         <div class="col contacto-title">
-          QUIENES SOMOS
+          CONTACTO
         </div>
       </div>
       <div class="row ">
