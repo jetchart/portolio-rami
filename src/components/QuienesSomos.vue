@@ -10,7 +10,7 @@
         <div class="col" align="center">
           <p class="quienes-somos-description">La Manada se trata sobre la unidad y el sentido de pertencencia. 
           Aquella fuerza que genera el grupo para enfrentar cualquier cosa. 
-          Asi también como la empatía y la habilidad de complementarse los unos a los otros.
+          Asi también como la empatía y la habilidad de complementarse los unos a los otros.<br>
           Como La Manada, nosotros también estamos unidos y así generamos la fuerza para llevar a 
           cabo todos nuestros desafíos.
           Apoyándonos entre nosotros y complementándonos.</p>
@@ -47,12 +47,13 @@ export default {
 }
 
 .quienes-somos-title {
-  font-size: 1cm;
+  font-size: 2em;
   font-weight: 800;
 }
 
 .quienes-somos-description {
   width: 55%;
+  font-size: 1.2em;
   font-weight: 600;
 }
 

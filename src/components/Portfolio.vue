@@ -57,7 +57,7 @@ export default {
 .portfolio-section {
   height: 7em;
   color:white;
-  font-size: 0.8cm;
+  font-size: 2em;
   font-weight: 800;
 }
 

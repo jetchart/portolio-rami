@@ -11,13 +11,13 @@ body {
 }
 
 .section-title {
-    font-size: 1cm;
+    font-size: 3em;
     font-weight: 800;
     color: white;
   }
 
 .section-item {
-    font-size: 0.7cm;
+    font-size: 2em;
     font-weight: 800;
     color:white;
   }
