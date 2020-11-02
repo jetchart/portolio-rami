@@ -6,56 +6,64 @@
         </div>
       </div>
       <div class="portfolio-section portfolio-section-3d">
-        <br><br><span class="portfolio-item-description" v-b-toggle.collapse-3d>3D</span>
-        <b-collapse id="collapse-3d">
-          <small>
-          Trabajo 1<br>
-          Trabajo 2<br>
-          Trabajo 3<br>
-          Trabajo 4<br>
-          Trabajo 5<br>
-          ...
-          </small>
-      </b-collapse>
+        <div class="portfolio-section-content">
+          <span class="portfolio-item-description" v-b-toggle.collapse-3d>3D</span>
+          <b-collapse id="collapse-3d">
+            <small>
+              <div class="portfolio-item-card">Trabajo 1</div>
+              <div class="portfolio-item-card">Trabajo 2</div>
+              <div class="portfolio-item-card">Trabajo 3</div>
+              <div class="portfolio-item-card">Trabajo 4</div>
+              <div class="portfolio-item-card">Trabajo 5</div>
+            ...
+            </small>
+        </b-collapse>
+      </div>
       </div>
       <div class="portfolio-section portfolio-section-ilustracion">
-       <br><br><span class="portfolio-item-description" v-b-toggle.collapse-ilustracion>ILUSTRACIÓN</span>
-       <b-collapse id="collapse-ilustracion">
-          <small>
-          Trabajo 1<br>
-          Trabajo 2<br>
-          Trabajo 3<br>
-          Trabajo 4<br>
-          Trabajo 5<br>
-          ...
-          </small>
-      </b-collapse>
+        <div class="portfolio-section-content">
+          <span class="portfolio-item-description" v-b-toggle.collapse-ilustracion>ILUSTRACIÓN</span>
+          <b-collapse id="collapse-ilustracion">
+              <small>
+              <div class="portfolio-item-card">Trabajo 1</div>
+              <div class="portfolio-item-card">Trabajo 2</div>
+              <div class="portfolio-item-card">Trabajo 3</div>
+              <div class="portfolio-item-card">Trabajo 4</div>
+              <div class="portfolio-item-card">Trabajo 5</div>
+              ...
+              </small>
+          </b-collapse>
+        </div>
       </div>
       <div class="portfolio-section portfolio-section-marketing-digital">
-       <br><br><span class="portfolio-item-description" v-b-toggle.collapse-marketing-digital>MARKETING DIGITAL</span>
-       <b-collapse id="collapse-marketing-digital">
-          <small>
-          Trabajo 1<br>
-          Trabajo 2<br>
-          Trabajo 3<br>
-          Trabajo 4<br>
-          Trabajo 5<br>
-          ...
-          </small>
-      </b-collapse>
+        <div class="portfolio-section-content">
+          <span class="portfolio-item-description" v-b-toggle.collapse-marketing-digital>MARKETING DIGITAL</span>
+          <b-collapse id="collapse-marketing-digital">
+              <small>
+              <div class="portfolio-item-card">Trabajo 1</div>
+              <div class="portfolio-item-card">Trabajo 2</div>
+              <div class="portfolio-item-card">Trabajo 3</div>
+              <div class="portfolio-item-card">Trabajo 4</div>
+              <div class="portfolio-item-card">Trabajo 5</div>
+              ...
+              </small>
+          </b-collapse>
+        </div>
       </div>
       <div class="portfolio-section portfolio-section-motion-graphics">
-       <br><br><span class="portfolio-item-description" v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span>
-       <b-collapse id="collapse-motion-graphics">
-          <small>
-          Trabajo 1<br>
-          Trabajo 2<br>
-          Trabajo 3<br>
-          Trabajo 4<br>
-          Trabajo 5<br>
-          ...
-          </small>
-      </b-collapse>
+        <div class="portfolio-section-content">
+          <span class="portfolio-item-description" v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span>
+          <b-collapse id="collapse-motion-graphics">
+              <small>
+              <div class="portfolio-item-card">Trabajo 1</div>
+              <div class="portfolio-item-card">Trabajo 2</div>
+              <div class="portfolio-item-card">Trabajo 3</div>
+              <div class="portfolio-item-card">Trabajo 4</div>
+              <div class="portfolio-item-card">Trabajo 5</div>
+              ...
+              </small>
+          </b-collapse>
+        </div>
       </div>
   </div>
 </template>
@@ -98,6 +106,12 @@ export default {
   color:white;
   font-size: 2em;
   font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-section-content {
+  width: 100%;
 }
 
 .portfolio-section-3d {
@@ -121,6 +135,10 @@ export default {
 }
 .portfolio-item-description:hover{
    font-size: 1.2em;
+}
+
+.portfolio-item-card {
+  
 }
 
 </style>
