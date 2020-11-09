@@ -200,6 +200,8 @@ export default {
 
 .portfolio-item-card {
   justify-content: center;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .portfolio-item {
