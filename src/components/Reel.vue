@@ -1,17 +1,34 @@
 <template>
   <div class="video-responsive">
-  <iframe src="https://www.youtube.com/embed/G-6ATMhCqO0?rel=0;&autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>
+  <iframe :src="reel.url" frameborder="0" allowfullscreen></iframe>
   </div>
 </template>
 
 <script>
+
+import { RestService } from './../js/services/RestService.js';
+
 export default {
   name: 'Reel',
   data () {
     return {
+      reel: {},
+      loading: false,
     }
   },
   mounted() {
+    this.loadReel();
+  },
+  methods: {
+    loadReel() {
+      this.loading = true;
+      RestService.getReel$()
+        .then(response => {
+          this.reel = response.data[0];
+          this.loading = false;
+          })
+        .catch(error => this.loading = false);
+    },
   }
 }
 </script>

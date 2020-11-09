@@ -1,33 +1,46 @@
 <template>
   <div class="section-quienes-somos">
-    <div class="opacity">
+    <div v-if="!loading" class="opacity-quienes-somos">
       <div class="row">
         <div class="col quienes-somos-title">
-          QUIENES SOMOS
+          {{quienesSomos.title}}
         </div>
       </div>
       <div class="row">
         <div class="col" align="center">
-          <p class="quienes-somos-description">La Manada se trata sobre la unidad y el sentido de pertencencia. 
-          Aquella fuerza que genera el grupo para enfrentar cualquier cosa. 
-          Asi también como la empatía y la habilidad de complementarse los unos a los otros.<br>
-          Como La Manada, nosotros también estamos unidos y así generamos la fuerza para llevar a 
-          cabo todos nuestros desafíos.
-          Apoyándonos entre nosotros y complementándonos.</p>
+          <p class="quienes-somos-description white-space-pre-wrap">{{quienesSomos.description}}</p>
         </div>
       </div>
     </div>
+    <div v-else><i class="fa fa-spin fa-spinner"></i></div>
   </div>
 </template>
 
 <script>
+
+import { RestService } from './../js/services/RestService.js';
+
 export default {
   name: 'QuienesSomos',
   data () {
     return {
+      quienesSomos: {},
+      loading: false,
     }
   },
   mounted() {
+    this.loadQuienesSomos();
+  },
+  methods: {
+    loadQuienesSomos() {
+      this.loading = true;
+      RestService.getQuienesSomos$()
+        .then(response => {
+          this.quienesSomos = response.data[0];
+          this.loading = false;
+          })
+        .catch(error => this.loading = false);
+    },
   }
 }
 </script>
@@ -40,7 +53,7 @@ export default {
   height: 100%;
 }
 
-.opacity {
+.opacity-quienes-somos {
   border-radius: 5px;
   background-color: white;
   opacity: 0.6;
@@ -49,6 +62,10 @@ export default {
 .quienes-somos-title {
   font-size: 3em;
   font-weight: 800;
+}
+
+.white-space-pre-wrap {
+  white-space: pre-wrap;
 }
 
 .quienes-somos-description {
