@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div class="item-data">
+      <div class="item-title">{{item.title}}</div>
+      <div class="item-description">{{item.description}}</div>
+    </div>
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -56,11 +60,15 @@
 <script>
   export default {
     name: 'Item',
+    props: ['item'],
     data() {
       return {
         slide: 0,
         sliding: null
       }
+    },
+    mounted() {
+      window.scrollTo(0, 0);
     },
     methods: {
       onSlideStart(slide) {
@@ -72,3 +80,25 @@
     }
   }
 </script>
+
+<style scoped>
+
+  .item-data {
+    margin-top: 1rem; 
+    margin-bottom: 1rem; 
+  }
+  
+  .item-title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+  }
+
+    .item-description {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: white;
+  }
+
+</style>

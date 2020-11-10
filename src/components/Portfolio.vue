@@ -138,7 +138,10 @@ export default {
   },
   methods: {
     viewItem(item) {
-      this.$router.push('/item');
+      this.$router.push({
+        name: "item",
+        params: { item: item, },
+      });
     },
   },
 }

@@ -14,6 +14,8 @@ export default new Router({
         },
         {
             path: '/item',
+            name: 'item',
+            props: true,
             component: Item
         },
     ],
