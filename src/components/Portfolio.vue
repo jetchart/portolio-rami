@@ -21,7 +21,7 @@
                           <small>{{item.description}}</small>
                         </div>
                         <div >
-                          <button class="btn btn-sm btn-primary" @click="viewItem(item)">Ingresar</button>
+                          <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
                         </div>
                       </div>
                     </div>
@@ -48,7 +48,7 @@
                           <small>{{item.description}}</small>
                         </div>
                         <div >
-                          <button class="btn btn-sm btn-primary" @click="viewItem(item)">Ingresar</button>
+                          <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
                         </div>
                       </div>
                     </div>
@@ -75,7 +75,7 @@
                           <small>{{item.description}}</small>
                         </div>
                         <div >
-                          <button class="btn btn-sm btn-primary" @click="viewItem(item)">Ingresar</button>
+                          <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
                         </div>
                       </div>
                     </div>
@@ -102,7 +102,7 @@
                           <small>{{item.description}}</small>
                         </div>
                         <div >
-                          <button class="btn btn-sm btn-primary" @click="viewItem(item)">Ingresar</button>
+                          <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
                         </div>
                       </div>
                     </div>
@@ -264,17 +264,29 @@ export default {
 
 .card-content-title {
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
 .card-content-description {
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .collapse-card {
   margin-bottom: 3rem;
+}
+
+.button-item {
+  background-color: rgb(109, 3, 95) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+
+.button-item:hover {
+  background-color: rgb(173, 8, 151) !important;
+  color: white;
 }
 
 </style>
