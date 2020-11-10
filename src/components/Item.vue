@@ -68,7 +68,9 @@
     color: black;
   }
 
-    .item-description {
+  .item-description {
+    margin-left: 2rem;
+    margin-right: 2rem;
     font-size: 1.2rem;
     font-weight: 600;
     opacity: 0.7;
@@ -78,7 +80,7 @@
   .item-component {
     margin: 2rem;
     padding: 1rem;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255, 0.7);
     border-radius: 5px;
   }
 
