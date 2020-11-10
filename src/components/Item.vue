@@ -63,6 +63,7 @@
   .item-title {
     font-size: 2rem;
     font-weight: 800;
+    opacity: 0.7;
     text-transform: uppercase;
     color: black;
   }
@@ -70,14 +71,14 @@
     .item-description {
     font-size: 1.2rem;
     font-weight: 600;
+    opacity: 0.7;
     color: black;
   }
 
   .item-component {
     margin: 2rem;
     padding: 1rem;
-    background-color: white;
-    opacity: 0.9;
+    background-color: rgb(255, 255, 255, 0.5);
     border-radius: 5px;
   }
 
