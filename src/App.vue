@@ -2,7 +2,8 @@
   <div id="app" class="all-window">
     <div><Header></Header></div>
     <router-view></router-view>
-    <div><Footer></Footer></div>
+    <div class="pre-footer"></div>
+    <div class="footer"><Footer></Footer></div>
   </div>
 </template>
 
@@ -76,6 +77,16 @@ export default {
 
 .no-margin {
   margin:0 !important;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.pre-footer {
+  height: 4em;
 }
 
 </style>
