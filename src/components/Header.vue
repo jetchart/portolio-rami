@@ -12,9 +12,9 @@
 
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item href="#reel" class="header-item">Reel</b-nav-item>
-          <b-nav-item href="#portfolio" class="header-item">Portfolio</b-nav-item>
-          <b-nav-item href="#about" class="header-item" >About</b-nav-item>
+          <b-nav-item @click="$router.push('/#reel')" class="header-item">Reel</b-nav-item>
+          <b-nav-item @click="$router.push('/#portfolio')" class="header-item">Portfolio</b-nav-item>
+          <b-nav-item @click="$router.push('/#about')" class="header-item" >About</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

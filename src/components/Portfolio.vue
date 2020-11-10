@@ -21,7 +21,7 @@
                           <small>{{item.description}}</small>
                         </div>
                         <div >
-                          <button class="btn btn-sm btn-primary">Ingresar</button>
+                          <button class="btn btn-sm btn-primary" @click="viewItem(item)">Ingresar</button>
                         </div>
                       </div>
                     </div>
@@ -48,7 +48,7 @@
                           <small>{{item.description}}</small>
                         </div>
                         <div >
-                          <button class="btn btn-sm btn-primary">Ingresar</button>
+                          <button class="btn btn-sm btn-primary" @click="viewItem(item)">Ingresar</button>
                         </div>
                       </div>
                     </div>
@@ -75,7 +75,7 @@
                           <small>{{item.description}}</small>
                         </div>
                         <div >
-                          <button class="btn btn-sm btn-primary">Ingresar</button>
+                          <button class="btn btn-sm btn-primary" @click="viewItem(item)">Ingresar</button>
                         </div>
                       </div>
                     </div>
@@ -102,7 +102,7 @@
                           <small>{{item.description}}</small>
                         </div>
                         <div >
-                          <button class="btn btn-sm btn-primary">Ingresar</button>
+                          <button class="btn btn-sm btn-primary" @click="viewItem(item)">Ingresar</button>
                         </div>
                       </div>
                     </div>
@@ -135,7 +135,12 @@ export default {
     RestService.getPortofolioIlustracion$().then(response => this.itemsIlustracion = response.data);
     RestService.getPortofolioMarketingDigital$().then(response => this.itemsMarketingDigital = response.data);
     RestService.getPortofolioMotionGraphics$().then(response => this.itemsMotionGraphics = response.data);
-  }
+  },
+  methods: {
+    viewItem(item) {
+      this.$router.push('/item');
+    },
+  },
 }
 </script>
 

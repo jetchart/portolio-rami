@@ -1,14 +1,7 @@
 <template>
   <div id="app" class="all-window">
     <div><Header></Header></div>
-    <div>
-      <div id="reel" class="transition-opacity"><Reel></Reel></div>
-      <div>
-        <div id="quienes-somos" class="row section"><QuienesSomos></QuienesSomos></div>
-        <div id="portfolio" class="row section"><Portfolio></Portfolio></div>
-        <div id="contacto" class="row section"><Contacto></Contacto></div>
-      </div>
-    </div>
+    <router-view></router-view>
     <div><Footer></Footer></div>
   </div>
 </template>
