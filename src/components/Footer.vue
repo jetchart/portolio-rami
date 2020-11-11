@@ -1,9 +1,8 @@
 <template>
-  <div class="opacity-header">
-    <b-navbar toggleable type="light" variant="light" align="center">
-      <b-navbar-brand href="#" class="footer-item">FOOTER</b-navbar-brand>
-
-    </b-navbar>
+  <div class="footer-nav">
+    <div align="center">
+      <span href="#" class="footer-title">Manada</span>
+    </div>
   </div>
 </template>
 
@@ -21,13 +20,20 @@ export default {
 
 <style>
 
-.opacity-header {
+.footer-nav {
   opacity: 0.6;
+  background-color: white;
+  height: 3rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer-item {
+.footer-title {
+  font-family: 'Qualy';
+  font-size: 2vh;
   font-weight: 800;
-  color: white;
+  color: black;
 }
 
 </style>

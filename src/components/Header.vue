@@ -1,7 +1,7 @@
 <template>
   <div class="opacity-header">
     <b-navbar toggleable type="light" variant="light">
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
+      <b-navbar-brand class="header-title" href="#">Manada</b-navbar-brand>
 
       <b-navbar-toggle target="navbar-toggle-collapse">
         <template #default="{ expanded }">
@@ -36,12 +36,19 @@ export default {
 <style>
 
 .opacity-header {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .header-item {
   font-weight: 800;
   color: white;
 }
+
+.header-title {
+  font-family: 'Qualy';
+  font-size: 3vh;
+  font-weight: 800;
+}
+
 
 </style>
