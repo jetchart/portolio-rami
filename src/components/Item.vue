@@ -62,6 +62,7 @@
   
   .item-title {
     font-size: 3em;
+    font-family: Qualy;
     font-weight: 800;
     opacity: 0.7;
     text-transform: uppercase;
@@ -69,9 +70,9 @@
   }
 
   .item-description {
+    font-size: 1.5rem;
     margin-left: 2rem;
     margin-right: 2rem;
-    font-size: 2rem;
     font-weight: 600;
     opacity: 0.7;
     color: black;

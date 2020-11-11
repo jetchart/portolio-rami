@@ -16,9 +16,8 @@ html {
 
 body {
   font-family: Viminalis;
-  background-image: url("../body.jpg");
-  background-repeat: repeat;
-  background-size: 100%;
+  background-image: url("../body.png");
+  background-size: cover;
   margin: 0px;
 }
 

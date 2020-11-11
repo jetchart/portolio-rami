@@ -5,112 +5,114 @@
           PORTFOLIO
         </div>
       </div>
-      <div class="portfolio-section portfolio-section-3d">
-        <div class="portfolio-section-content">
-          <div class="portfolio-item-description"><span v-b-toggle.collapse-3d>3D</span></div>
-          <b-collapse id="collapse-3d" class="collapse-card">
-            <div class="row portfolio-item-card " align="center">
-                <div class="portfolio-item" v-for="(item, index) in items3d">
-                  <div class="card-image responsive-image">
-                    <div class="card-content hide">
-                      <div>
-                        <div class="card-content-title">
-                          {{item.title}}
-                        </div>
-                        <div class="card-content-description">
-                          <small>{{item.description}}</small>
-                        </div>
-                        <div >
-                          <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
-                        </div>
-                      </div>
-                    </div>
-                    <img :src="item.imageUrl">
-                  </div>
-                </div>
-              </div>
-        </b-collapse>
-      </div>
-      </div>
-      <div class="portfolio-section portfolio-section-ilustracion">
-        <div class="portfolio-section-content">
-          <div class="portfolio-item-description"><span v-b-toggle.collapse-ilustracion>ILUSTRACIÓN</span></div>
-          <b-collapse id="collapse-ilustracion" class="collapse-card">
+      <div class="sections">
+        <div class="portfolio-section portfolio-section-3d">
+          <div class="portfolio-section-content">
+            <div class="portfolio-item-description"><span v-b-toggle.collapse-3d>3D</span></div>
+            <b-collapse id="collapse-3d" class="collapse-card">
               <div class="row portfolio-item-card " align="center">
-                <div class="col" v-for="(item, index) in itemsMarketingDigital">
-                  <div class="card-image responsive-image">
-                    <div class="card-content hide">
-                      <div>
-                        <div class="card-content-title">
-                          {{item.title}}
-                        </div>
-                        <div class="card-content-description">
-                          <small>{{item.description}}</small>
-                        </div>
-                        <div >
-                          <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
+                  <div class="portfolio-item" v-for="(item, index) in items3d">
+                    <div class="card-image responsive-image">
+                      <div class="card-content hide">
+                        <div>
+                          <div class="card-content-title">
+                            {{item.title}}
+                          </div>
+                          <div class="card-content-description">
+                            <small>{{item.description}}</small>
+                          </div>
+                          <div >
+                            <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
+                          </div>
                         </div>
                       </div>
+                      <img :src="item.imageUrl">
                     </div>
-                    <img :src="item.imageUrl">
                   </div>
                 </div>
-              </div>
           </b-collapse>
         </div>
-      </div>
-      <div class="portfolio-section portfolio-section-marketing-digital">
-        <div class="portfolio-section-content">
-          <div class="portfolio-item-description"> <span v-b-toggle.collapse-marketing-digital>MARKETING DIGITAL</span></div>
-          <b-collapse id="collapse-marketing-digital" class="collapse-card">
-              <div class="row portfolio-item-card " align="center">
-                <div class="col" v-for="(item, index) in itemsMarketingDigital">
-                  <div class="card-image responsive-image">
-                    <div class="card-content hide">
-                      <div>
-                        <div class="card-content-title">
-                          {{item.title}}
-                        </div>
-                        <div class="card-content-description">
-                          <small>{{item.description}}</small>
-                        </div>
-                        <div >
-                          <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
-                        </div>
-                      </div>
-                    </div>
-                    <img :src="item.imageUrl">
-                  </div>
-                </div>
-              </div>
-          </b-collapse>
         </div>
-      </div>
-      <div class="portfolio-section portfolio-section-motion-graphics">
-        <div class="portfolio-section-content">
-          <div class="portfolio-item-description"><span v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span></div>
-          <b-collapse id="collapse-motion-graphics" class="collapse-card">
-              <div class="row portfolio-item-card " align="center">
-                <div class="col" v-for="(item, index) in itemsMotionGraphics">
-                  <div class="card-image responsive-image">
-                    <div class="card-content hide">
-                      <div>
-                        <div class="card-content-title">
-                          {{item.title}}
-                        </div>
-                        <div class="card-content-description">
-                          <small>{{item.description}}</small>
-                        </div>
-                        <div >
-                          <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
+        <div class="portfolio-section portfolio-section-ilustracion">
+          <div class="portfolio-section-content">
+            <div class="portfolio-item-description"><span v-b-toggle.collapse-ilustracion>ILUSTRACIÓN</span></div>
+            <b-collapse id="collapse-ilustracion" class="collapse-card">
+                <div class="row portfolio-item-card " align="center">
+                  <div class="col" v-for="(item, index) in itemsMarketingDigital">
+                    <div class="card-image responsive-image">
+                      <div class="card-content hide">
+                        <div>
+                          <div class="card-content-title">
+                            {{item.title}}
+                          </div>
+                          <div class="card-content-description">
+                            <small>{{item.description}}</small>
+                          </div>
+                          <div >
+                            <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
+                          </div>
                         </div>
                       </div>
+                      <img :src="item.imageUrl">
                     </div>
-                    <img :src="item.imageUrl">
                   </div>
                 </div>
-              </div>
-          </b-collapse>
+            </b-collapse>
+          </div>
+        </div>
+        <div class="portfolio-section portfolio-section-marketing-digital">
+          <div class="portfolio-section-content">
+            <div class="portfolio-item-description"> <span v-b-toggle.collapse-marketing-digital>MARKETING DIGITAL</span></div>
+            <b-collapse id="collapse-marketing-digital" class="collapse-card">
+                <div class="row portfolio-item-card " align="center">
+                  <div class="col" v-for="(item, index) in itemsMarketingDigital">
+                    <div class="card-image responsive-image">
+                      <div class="card-content hide">
+                        <div>
+                          <div class="card-content-title">
+                            {{item.title}}
+                          </div>
+                          <div class="card-content-description">
+                            <small>{{item.description}}</small>
+                          </div>
+                          <div >
+                            <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
+                          </div>
+                        </div>
+                      </div>
+                      <img :src="item.imageUrl">
+                    </div>
+                  </div>
+                </div>
+            </b-collapse>
+          </div>
+        </div>
+        <div class="portfolio-section portfolio-section-motion-graphics">
+          <div class="portfolio-section-content">
+            <div class="portfolio-item-description"><span v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span></div>
+            <b-collapse id="collapse-motion-graphics" class="collapse-card">
+                <div class="row portfolio-item-card " align="center">
+                  <div class="col" v-for="(item, index) in itemsMotionGraphics">
+                    <div class="card-image responsive-image">
+                      <div class="card-content hide">
+                        <div>
+                          <div class="card-content-title">
+                            {{item.title}}
+                          </div>
+                          <div class="card-content-description">
+                            <small>{{item.description}}</small>
+                          </div>
+                          <div >
+                            <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
+                          </div>
+                        </div>
+                      </div>
+                      <img :src="item.imageUrl">
+                    </div>
+                  </div>
+                </div>
+            </b-collapse>
+          </div>
         </div>
       </div>
   </div>
@@ -165,7 +167,7 @@ export default {
 
 .portfolio-title {
   font-family: 'Qualy';
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
 }
 
@@ -209,8 +211,8 @@ export default {
 
 .portfolio-item-card {
   justify-content: center;
-  margin-right: 0px;
-  margin-left: 0px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .portfolio-item {
@@ -222,11 +224,12 @@ export default {
 }
 
 .responsive-image {
-  width: 12em;
+  width: 22rem;
   height: auto;
   margin-bottom: 0.3em;
   position: relative;
 }
+
 .responsive-image img {
   width: 100%;
   height: 100%;
@@ -265,13 +268,13 @@ export default {
 
 .card-content-title {
   font-weight: 800;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
 .card-content-description {
   font-weight: 800;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
 
 .collapse-card {
