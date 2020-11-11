@@ -79,8 +79,8 @@
   }
 
   .item-component {
-    margin: 2rem;
-    padding: 1rem;
+    margin: 1rem;
+    padding: 0.5rem;
     background-color: rgb(255, 255, 255, 0.7);
     border-radius: 5px;
   }
