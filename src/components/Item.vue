@@ -17,9 +17,9 @@
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
       >
-        <b-carousel-slide v-for="(image, index) in item.images"
-          :img-src="image.url"
-        ><a class="slide-link" target="_blank" :href="image.url">Ampliar</a></b-carousel-slide>
+        <b-carousel-slide v-for="(image, index) in item.images" :img-src="image.url">
+          <a class="slide-link" target="_blank" :href="image.url">Ampliar</a>
+        </b-carousel-slide>
 
       </b-carousel>
     </div>
@@ -92,7 +92,7 @@
 
   .slide-link {
     color: white;
-    font-size: 1em;
+    font-size: 2vw;
     font-weight: 800;
     text-transform: uppercase;
   }
