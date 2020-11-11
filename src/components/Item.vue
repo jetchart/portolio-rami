@@ -9,6 +9,7 @@
         id="carousel-1"
         v-model="slide"
         :interval="4000"
+        controls
         indicators
         background="#ababab"
         img-width="1024"
@@ -92,7 +93,7 @@
 
   .slide-link {
     color: white;
-    font-size: 1vw;
+    font-size: 1.5vh;
     font-weight: 800;
     text-transform: uppercase;
   }
