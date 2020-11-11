@@ -9,7 +9,6 @@
         id="carousel-1"
         v-model="slide"
         :interval="4000"
-        controls
         indicators
         background="#ababab"
         img-width="1024"
@@ -19,10 +18,8 @@
         @sliding-end="onSlideEnd"
       >
         <b-carousel-slide v-for="(image, index) in item.images"
-          :caption="image.title"
-          :text="image.description"
           :img-src="image.url"
-        ></b-carousel-slide>
+        ><a class="slide-link" target="_blank" :href="image.url">Ampliar</a></b-carousel-slide>
 
       </b-carousel>
     </div>
@@ -91,6 +88,13 @@
 
   .carousel-margin-bottom {
     margin-bottom: 1rem;
+  }
+
+  .slide-link {
+    color: white;
+    font-size: 1em;
+    font-weight: 800;
+    text-transform: uppercase;
   }
 
 </style>
