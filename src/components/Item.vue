@@ -61,7 +61,7 @@
   }
   
   .item-title {
-    font-size: 2rem;
+    font-size: 3em;
     font-weight: 800;
     opacity: 0.7;
     text-transform: uppercase;
@@ -71,7 +71,7 @@
   .item-description {
     margin-left: 2rem;
     margin-right: 2rem;
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: 600;
     opacity: 0.7;
     color: black;

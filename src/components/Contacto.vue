@@ -44,7 +44,7 @@ export default {
 
 .contacto-title {
   font-family: 'Qualy';
-  font-size: 1cm;
+  font-size: 4rem;
   font-weight: 800;
   color: white;
 }

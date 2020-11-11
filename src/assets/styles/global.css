@@ -4,6 +4,12 @@
    url(/src/assets/fonts/viminalis/Viminalis.otf);
 }
 
+@font-face {
+  font-family: "Qualy";
+  src: local("FireBrathers"),
+   url(/src/assets/fonts/OrangeJuice.ttf);
+}
+
 html {
   scroll-behavior: smooth;
 }

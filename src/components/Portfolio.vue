@@ -165,7 +165,7 @@ export default {
 
 .portfolio-title {
   font-family: 'Qualy';
-  font-size: 3em;
+  font-size: 4rem;
   font-weight: 800;
 }
 
@@ -265,13 +265,13 @@ export default {
 
 .card-content-title {
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
 }
 
 .card-content-description {
   font-weight: 800;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 }
 
 .collapse-card {

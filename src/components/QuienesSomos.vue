@@ -61,7 +61,7 @@ export default {
 
 .quienes-somos-title {
   font-family: 'Qualy';
-  font-size: 3em;
+  font-size: 4rem;
   font-weight: 800;
 }
 
