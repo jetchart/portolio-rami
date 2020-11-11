@@ -6,8 +6,8 @@
           {{quienesSomos.title}}
         </div>
       </div>
-      <div class="row">
-        <div class="col" align="center">
+      <div class="row quienes-somos-row" align="center">
+        <div class="col-sm-8 col-md-6 col-lg-6 " >
           <p class="quienes-somos-description white-space-pre-wrap">{{quienesSomos.description}}</p>
         </div>
       </div>
@@ -70,9 +70,15 @@ export default {
 }
 
 .quienes-somos-description {
-  width: 60%;
   font-size: 1.2rem;
   font-weight: 800;
+}
+
+.quienes-somos-row {
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 </style>

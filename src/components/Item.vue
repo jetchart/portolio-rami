@@ -92,7 +92,7 @@
 
   .slide-link {
     color: white;
-    font-size: 2vw;
+    font-size: 1vw;
     font-weight: 800;
     text-transform: uppercase;
   }

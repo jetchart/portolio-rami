@@ -8,7 +8,7 @@
       </div>
       <div class="row ">
         <div class="col" align="center">
-            <b-textarea rows="8" class="contacto-description" type="text"></b-textarea>
+            <b-textarea rows="8" class="contacto-description" type="text" v-model="text"></b-textarea>
             <b-button class="btn btn-success contacto-description">ENVIAR</b-button>
         </div>
       </div>
@@ -21,6 +21,7 @@ export default {
   name: 'QuienesSomos',
   data () {
     return {
+      text: null,
     }
   },
   mounted() {
