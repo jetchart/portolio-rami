@@ -59,7 +59,7 @@
   }
   
   .item-title {
-    font-size: 3em;
+    font-size: 2.5em;
     font-family: Qualy;
     font-weight: 800;
     opacity: 0.7;
@@ -81,6 +81,7 @@
     padding: 0.5rem;
     background-color: rgb(255, 255, 255, 0.7);
     border-radius: 5px;
+    margin-bottom: 5rem;
   }
 
   .carousel {

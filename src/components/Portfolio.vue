@@ -167,7 +167,7 @@ export default {
 
 .portfolio-title {
   font-family: 'Qualy';
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
 }
 
