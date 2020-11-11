@@ -1,23 +1,15 @@
-@font-face { 
-  font-family: 'Viminalis'; 
-  src: local('Viminalis'), 
-      url(/../fonts/viminalis/Viminalis.woff2) format('woff2'), 
-      url(/../fonts/viminalis/Viminalis.woff) format('woff'), 
-      url(/../fonts/viminalis/Viminalis.otf) format('opentype');
-}
-
-@font-face { 
-  font-family: 'Qualy'; 
-  src: local('Qualy'), 
-      url(/../fonts/qualy/QualyBold.ttf) format('truetype');
+@font-face {
+  font-family: "Viminalis";
+  src: local("Viminalis"),
+   url(/src/assets/fonts/viminalis/Viminalis.otf);
 }
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Viminalis', 'Qualy';
 }
 
 body {
+  font-family: Viminalis;
   background-image: url("../body.jpg");
   background-repeat: repeat;
   background-size: 100%;
