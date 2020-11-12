@@ -92,7 +92,7 @@
         </div>
         <div class="portfolio-section portfolio-section-motion-graphics">
           <div class="portfolio-section-content">
-            <div v-if="loadingMotionGraphics" class="portfolio-item-description"><span v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span></div>
+            <div v-if="!loadingMotionGraphics" class="portfolio-item-description"><span v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span></div>
             <b-spinner v-else></b-spinner>
             <b-collapse id="collapse-motion-graphics" class="collapse-card">
                 <div class="row portfolio-item-card " align="center">

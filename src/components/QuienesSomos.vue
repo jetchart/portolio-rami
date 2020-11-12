@@ -1,6 +1,6 @@
 <template>
   <div class="section-quienes-somos">
-    <div class="opacity-quienes-somos">
+    <div v-if="!loading" class="opacity-quienes-somos">
       <template v-if="!loading"> 
         <div class="row">
           <div class="col quienes-somos-title">
@@ -13,8 +13,8 @@
           </div>
         </div>
       </template>
-      <b-spinner v-else></b-spinner>
     </div>
+    <div v-else class="opacity-quienes-somos spinner-quienes-somos"><b-spinner></b-spinner></div>
   </div>
 </template>
 
@@ -59,11 +59,14 @@ export default {
   border-radius: 5px;
   background-color: white;
   opacity: 0.6;
-  min-height: 10rem;
-  display:flex;
-  align-items: center;
-  justify-content: center;
 }
+
+  .spinner-quienes-somos {
+    height: 10rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 .quienes-somos-title {
   font-family: 'Qualy';

@@ -13,5 +13,14 @@ export const RestService = {
     getPortofolio3d$() {
         return AXIOS.get(`${URL_API}/portfolio-3d?apikey=${API_KEY}&q={}&sort=id&dir=-1`);
     },
+    getPortofolioIlustracion$() {
+        return AXIOS.get(`${URL_API}/portfolio-ilustracion?apikey=${API_KEY}&q={}&sort=id&dir=-1`);
+    },
+    getPortofolioMarketingDigital$() {
+        return AXIOS.get(`${URL_API}/portfolio-marketing-digital?apikey=${API_KEY}&q={}&sort=id&dir=-1`);
+    },
+    getPortofolioMotionGraphics$() {
+        return AXIOS.get(`${URL_API}/portfolio-motion-graphics?apikey=${API_KEY}&q={}&sort=id&dir=-1`);
+    },
     
 }
