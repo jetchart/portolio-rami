@@ -51,7 +51,7 @@ export default {
 }
 
 .contacto-description {
-  width: 50%;
+  width: 70%;
   font-weight: 600;
 }
 

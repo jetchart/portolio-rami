@@ -36,7 +36,8 @@
         </div>
         <div class="portfolio-section portfolio-section-ilustracion">
           <div class="portfolio-section-content">
-            <div class="portfolio-item-description"><span v-b-toggle.collapse-ilustracion>ILUSTRACIÓN</span></div>
+            <div v-if="!loadingIlustracion" class="portfolio-item-description"><span v-b-toggle.collapse-ilustracion>ILUSTRACIÓN</span></div>
+            <b-spinner v-else></b-spinner>
             <b-collapse id="collapse-ilustracion" class="collapse-card">
                 <div class="row portfolio-item-card " align="center">
                   <div class="col" v-for="(item, index) in itemsMarketingDigital">
@@ -63,7 +64,8 @@
         </div>
         <div class="portfolio-section portfolio-section-marketing-digital">
           <div class="portfolio-section-content">
-            <div class="portfolio-item-description"> <span v-b-toggle.collapse-marketing-digital>MARKETING DIGITAL</span></div>
+            <div v-if="!loadingMarketingDigital" class="portfolio-item-description"> <span v-b-toggle.collapse-marketing-digital>MARKETING DIGITAL</span></div>
+            <b-spinner v-else></b-spinner>
             <b-collapse id="collapse-marketing-digital" class="collapse-card">
                 <div class="row portfolio-item-card " align="center">
                   <div class="col" v-for="(item, index) in itemsMarketingDigital">
@@ -90,7 +92,8 @@
         </div>
         <div class="portfolio-section portfolio-section-motion-graphics">
           <div class="portfolio-section-content">
-            <div class="portfolio-item-description"><span v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span></div>
+            <div v-if="loadingMotionGraphics" class="portfolio-item-description"><span v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span></div>
+            <b-spinner v-else></b-spinner>
             <b-collapse id="collapse-motion-graphics" class="collapse-card">
                 <div class="row portfolio-item-card " align="center">
                   <div class="col" v-for="(item, index) in itemsMotionGraphics">
@@ -130,18 +133,39 @@ export default {
       items3d: [],
       itemsIlustracion: [],
       itemsMarketingDigital: [],
-      marketingDigital: [],
+      itemsMotionGraphics: [],
       loading3d: true,
+      loadingIlustracion: true,
+      loadingMarketingDigital: true,
+      loadingMotionGraphics: true,
     }
   },
   mounted() {
     RestService.getPortofolio3d$().then(response => {
       this.items3d = response.data;
       this.loading3d = false;
-      });
-    RestService.getPortofolioIlustracion$().then(response => this.itemsIlustracion = response.data);
-    RestService.getPortofolioMarketingDigital$().then(response => this.itemsMarketingDigital = response.data);
-    RestService.getPortofolioMotionGraphics$().then(response => this.itemsMotionGraphics = response.data);
+      })
+      .catch(error => this.loading3d = false);
+    RestService.getPortofolioIlustracion$()
+    .then(response => {
+      this.itemsIlustracion = response.data;
+      this.loadingIlustracion = false;
+    })
+    .catch(error => this.loadingIlustracion = false);
+
+    RestService.getPortofolioMarketingDigital$()
+    .then(response => {
+      this.itemsMarketingDigital = response.data;
+      this.loadingMarketingDigital = false;
+    })
+    .catch(error => this.loadingMarketingDigital = false);
+
+    RestService.getPortofolioMotionGraphics$()
+    .then(response => {
+      this.itemsMotionGraphics = response.data;
+      this.loadingMotionGraphics = false;
+    })
+    .catch(error => this.loadingMotionGraphics = false);
   },
   methods: {
     viewItem(item) {

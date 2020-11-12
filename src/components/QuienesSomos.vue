@@ -13,7 +13,7 @@
           </div>
         </div>
       </template>
-      <div v-else><b-spinner></b-spinner></div>
+      <b-spinner v-else></b-spinner>
     </div>
   </div>
 </template>
@@ -60,6 +60,9 @@ export default {
   background-color: white;
   opacity: 0.6;
   min-height: 10rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .quienes-somos-title {

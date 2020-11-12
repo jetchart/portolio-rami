@@ -1,7 +1,11 @@
 <template>
-  <div class="video-responsive">
-    <iframe v-if="!loading" :src="reel.url" frameborder="0" allowfullscreen></iframe>
-    <b-spinner v-else style="width: 3rem; height: 3rem;"></b-spinner>
+  <div>
+    <div v-if="!loading" class="video-responsive">
+      <iframe :src="reel.url" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div v-else class="spinner-reel">
+      <b-spinner style="width: 3rem; height: 3rem;"></b-spinner>
+    </div>
   </div>
 </template>
 
@@ -40,7 +44,7 @@ export default {
   background-color: lawngreen;
 }
 
-.video-responsive {
+  .video-responsive {
     height: 0;
     overflow: hidden;
     padding-bottom: 56.25%;
@@ -48,12 +52,19 @@ export default {
     position: relative;
   }
 
-.video-responsive iframe, .video-responsive object, .video-responsive embed {
+  .video-responsive iframe, .video-responsive object, .video-responsive embed {
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
+  }
+
+  .spinner-reel {
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 </style>
