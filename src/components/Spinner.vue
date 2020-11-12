@@ -4,8 +4,8 @@
         <b-icon stacked icon="star-fill" animation="fade" :scale="0.4 * scale" ></b-icon>
         <b-icon stacked icon="arrow-clockwise" animation="spin" :scale="1 * scale"></b-icon>
       </b-iconstack>-->
-      <div class="spinner-pos "><img height="30" width="30" src="../assets/manada.png"></div>
-      <b-spinner class="spinner-pos" style="width: 4rem; height: 4rem;"></b-spinner>
+      <div class="spinner-pos "><img :height="15 * scale" :width="15 * scale" src="../assets/manada.png"></div>
+      <b-spinner class="spinner-pos" :class="{'spinner-sm': scale == 1, 'spinner-md': scale == 2, 'spinner-lg': scale == 3, 'spinner-xl': scale == 4}"></b-spinner>
     </div>
 </template>
 
@@ -17,6 +17,10 @@ export default {
     scale: {
       type: Number,
       default: 1,
+    },
+    variant: {
+      color: String,
+      default: 'black',
     },
   },
   data () {
@@ -63,5 +67,26 @@ export default {
 .image {
   opacity: 1;
 }
+
+.spinner-sm {
+  width: 2rem; 
+  height: 2rem;
+}
+
+.spinner-md {
+  width: 4rem; 
+  height: 4rem;
+}
+
+.spinner-lg {
+  width: 6rem; 
+  height: 6rem;
+}
+
+.spinner-xl {
+  width: 8rem; 
+  height: 8rem;
+}
+
 
 </style>

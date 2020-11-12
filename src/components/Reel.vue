@@ -4,7 +4,7 @@
       <iframe :src="reel.url" frameborder="0" allowfullscreen></iframe>
     </div>
     <div v-else class="spinner-reel">
-      <spinner scale="5"></spinner>
+      <spinner scale="4"></spinner>
     </div>
   </div>
 </template>
