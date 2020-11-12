@@ -1,6 +1,7 @@
 <template>
   <div class="video-responsive">
-  <iframe :src="reel.url" frameborder="0" allowfullscreen></iframe>
+    <iframe v-if="!loading" :src="reel.url" frameborder="0" allowfullscreen></iframe>
+    <b-spinner v-else style="width: 3rem; height: 3rem;"></b-spinner>
   </div>
 </template>
 

@@ -1,18 +1,20 @@
 <template>
   <div class="section-quienes-somos">
-    <div v-if="!loading" class="opacity-quienes-somos">
-      <div class="row">
-        <div class="col quienes-somos-title">
-          {{quienesSomos.title}}
+    <div class="opacity-quienes-somos">
+      <template v-if="!loading"> 
+        <div class="row">
+          <div class="col quienes-somos-title">
+            {{quienesSomos.title}}
+          </div>
         </div>
-      </div>
-      <div class="row quienes-somos-row" align="center">
-        <div class="col-sm-8 col-md-6 col-lg-6 " >
-          <p class="quienes-somos-description white-space-pre-wrap">{{quienesSomos.description}}</p>
+        <div class="row quienes-somos-row" align="center">
+          <div class="col-sm-8 col-md-6 col-lg-6 " >
+            <p class="quienes-somos-description white-space-pre-wrap">{{quienesSomos.description}}</p>
+          </div>
         </div>
-      </div>
+      </template>
+      <div v-else><b-spinner></b-spinner></div>
     </div>
-    <div v-else><i class="fa fa-spin fa-spinner"></i></div>
   </div>
 </template>
 
@@ -57,6 +59,7 @@ export default {
   border-radius: 5px;
   background-color: white;
   opacity: 0.6;
+  min-height: 10rem;
 }
 
 .quienes-somos-title {

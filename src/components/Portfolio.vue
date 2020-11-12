@@ -8,7 +8,8 @@
       <div class="sections">
         <div class="portfolio-section portfolio-section-3d">
           <div class="portfolio-section-content">
-            <div class="portfolio-item-description"><span v-b-toggle.collapse-3d>3D</span></div>
+            <div v-if="!loading3d" class="portfolio-item-description"><span v-b-toggle.collapse-3d>3D</span></div>
+            <b-spinner v-else></b-spinner>
             <b-collapse id="collapse-3d" class="collapse-card">
               <div class="row portfolio-item-card " align="center">
                   <div class="portfolio-item" v-for="(item, index) in items3d">
@@ -30,7 +31,7 @@
                     </div>
                   </div>
                 </div>
-          </b-collapse>
+            </b-collapse>
         </div>
         </div>
         <div class="portfolio-section portfolio-section-ilustracion">
@@ -130,10 +131,14 @@ export default {
       itemsIlustracion: [],
       itemsMarketingDigital: [],
       marketingDigital: [],
+      loading3d: true,
     }
   },
   mounted() {
-    RestService.getPortofolio3d$().then(response => this.items3d = response.data);
+    RestService.getPortofolio3d$().then(response => {
+      this.items3d = response.data;
+      this.loading3d = false;
+      });
     RestService.getPortofolioIlustracion$().then(response => this.itemsIlustracion = response.data);
     RestService.getPortofolioMarketingDigital$().then(response => this.itemsMarketingDigital = response.data);
     RestService.getPortofolioMotionGraphics$().then(response => this.itemsMotionGraphics = response.data);
