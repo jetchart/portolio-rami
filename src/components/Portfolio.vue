@@ -9,7 +9,7 @@
         <div class="portfolio-section portfolio-section-3d">
           <div class="portfolio-section-content">
             <div v-if="!loading3d" class="portfolio-item-description"><span v-b-toggle.collapse-3d>3D</span></div>
-            <b-spinner v-else></b-spinner>
+            <spinner v-else scale="2"></spinner>
             <b-collapse id="collapse-3d" class="collapse-card">
               <div class="row portfolio-item-card " align="center">
                   <div class="portfolio-item" v-for="(item, index) in items3d">
@@ -37,7 +37,7 @@
         <div class="portfolio-section portfolio-section-ilustracion">
           <div class="portfolio-section-content">
             <div v-if="!loadingIlustracion" class="portfolio-item-description"><span v-b-toggle.collapse-ilustracion>ILUSTRACIÓN</span></div>
-            <b-spinner v-else></b-spinner>
+            <spinner v-else scale="2"></spinner>
             <b-collapse id="collapse-ilustracion" class="collapse-card">
                 <div class="row portfolio-item-card " align="center">
                   <div class="col" v-for="(item, index) in itemsMarketingDigital">
@@ -65,7 +65,7 @@
         <div class="portfolio-section portfolio-section-marketing-digital">
           <div class="portfolio-section-content">
             <div v-if="!loadingMarketingDigital" class="portfolio-item-description"> <span v-b-toggle.collapse-marketing-digital>MARKETING DIGITAL</span></div>
-            <b-spinner v-else></b-spinner>
+            <spinner v-else scale="2"></spinner>
             <b-collapse id="collapse-marketing-digital" class="collapse-card">
                 <div class="row portfolio-item-card " align="center">
                   <div class="col" v-for="(item, index) in itemsMarketingDigital">
@@ -93,7 +93,7 @@
         <div class="portfolio-section portfolio-section-motion-graphics">
           <div class="portfolio-section-content">
             <div v-if="!loadingMotionGraphics" class="portfolio-item-description"><span v-b-toggle.collapse-motion-graphics>MOTION GRAPHICS</span></div>
-            <b-spinner v-else></b-spinner>
+            <spinner v-else scale="2"></spinner>
             <b-collapse id="collapse-motion-graphics" class="collapse-card">
                 <div class="row portfolio-item-card " align="center">
                   <div class="col" v-for="(item, index) in itemsMotionGraphics">
@@ -124,10 +124,12 @@
 
 <script>
 
+import Spinner from './Spinner.vue'
 import { RestService } from './../js/services/RestService.js';
 
 export default {
   name: 'QuienesSomos',
+  components: {Spinner, },
   data () {
     return {
       items3d: [],

@@ -14,16 +14,18 @@
         </div>
       </template>
     </div>
-    <div v-else class="opacity-quienes-somos spinner-quienes-somos"><b-spinner></b-spinner></div>
+    <div v-else class="opacity-quienes-somos spinner-quienes-somos"><spinner scale="3"></spinner></div>
   </div>
 </template>
 
 <script>
 
+import Spinner from './Spinner.vue'
 import { RestService } from './../js/services/RestService.js';
 
 export default {
   name: 'QuienesSomos',
+  components: {Spinner, },
   data () {
     return {
       quienesSomos: {},

@@ -4,17 +4,19 @@
       <iframe :src="reel.url" frameborder="0" allowfullscreen></iframe>
     </div>
     <div v-else class="spinner-reel">
-      <b-spinner style="width: 3rem; height: 3rem;"></b-spinner>
+      <spinner scale="5"></spinner>
     </div>
   </div>
 </template>
 
 <script>
 
+import Spinner from './Spinner.vue'
 import { RestService } from './../js/services/RestService.js';
 
 export default {
   name: 'Reel',
+  components: {Spinner, },
   data () {
     return {
       reel: {},
