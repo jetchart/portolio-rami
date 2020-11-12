@@ -81,7 +81,7 @@
     padding: 0.5rem;
     background-color: rgb(255, 255, 255, 0.7);
     border-radius: 5px;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
 
   .carousel {
