@@ -4,8 +4,11 @@
         <b-icon stacked icon="star-fill" animation="fade" :scale="0.4 * scale" ></b-icon>
         <b-icon stacked icon="arrow-clockwise" animation="spin" :scale="1 * scale"></b-icon>
       </b-iconstack>-->
-      <div class="spinner-pos "><img :height="15 * scale" :width="15 * scale" src="../assets/manada.png"></div>
-      <b-spinner class="spinner-pos" :class="{'spinner-sm': scale == 1, 'spinner-md': scale == 2, 'spinner-lg': scale == 3, 'spinner-xl': scale == 4}"></b-spinner>
+      <div class="spinner-pos ">
+        <img v-if="variant == 'dark'" :height="15 * scale" :width="15 * scale" src="../assets/manada-dark.png">
+        <img v-if="variant == 'light'" :height="15 * scale" :width="15 * scale" src="../assets/manada-light.png">
+        </div>
+      <b-spinner class="spinner-pos" :class="[spinnerClass, colorClass]"></b-spinner>
     </div>
 </template>
 
@@ -14,20 +17,31 @@
 export default {
   name: 'Spinner',
   props: {
-    scale: {
-      type: Number,
-      default: 1,
+    // ['sm', 'md', 'lg', 'xl']
+    size: {
+      type: String,
+      default: "md",
     },
+    // ['light', 'dark']
     variant: {
       color: String,
-      default: 'black',
+      default: 'dark',
     },
   },
   data () {
     return {
+      spinnerClass: null,
+      scale: null,
+      imageName: null,
     }
   },
   mounted() {
+    if (this.size == 'sm') this.scale = 1;
+    if (this.size == 'md') this.scale = 2;
+    if (this.size == 'lg') this.scale = 3;
+    if (this.size == 'xl') this.scale = 4;
+    this.spinnerClass = 'spinner-' + this.size;
+    this.colorClass = 'color-' + this.variant;
   },
   methods: {
   }
@@ -55,6 +69,14 @@ export default {
   color: black;
   opacity: 0.7;
   font-size: 1rem !important;
+}
+
+.color-black {
+  color: black;
+}
+
+.color-light {
+  color: white;
 }
 
 .spinner-context {

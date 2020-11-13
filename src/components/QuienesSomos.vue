@@ -14,7 +14,7 @@
         </div>
       </template>
     </div>
-    <div v-else class="opacity-quienes-somos spinner-quienes-somos"><spinner scale="3"></spinner></div>
+    <div v-else class="opacity-quienes-somos spinner-quienes-somos"><spinner size="md"></spinner></div>
   </div>
 </template>
 
