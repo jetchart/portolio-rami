@@ -7,7 +7,7 @@
     <div v-else class="spinner-div">
       <spinner size="lg" variant="dark"></spinner>
     </div>
-    <div class="carousel">
+    <div v-if="!loading" class="carousel">
       <b-carousel
         id="carousel-1"
         v-model="slide"
