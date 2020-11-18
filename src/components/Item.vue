@@ -1,8 +1,11 @@
 <template>
   <div class="item-component">
-    <div class="item-data">
+    <div v-if="!loading" class="item-data">
       <div class="item-title">{{item.title}}</div>
       <div class="item-description">{{item.description}}</div>
+    </div>
+    <div v-else class="spinner-div">
+      <spinner size="lg" variant="dark"></spinner>
     </div>
     <div class="carousel">
       <b-carousel
@@ -28,19 +31,35 @@
 </template>
 
 <script>
+
+import Spinner from './Spinner.vue'
+import { RestService } from './../js/services/RestService.js';
+
   export default {
     name: 'Item',
-    props: ['item'],
+    components: {Spinner, },
+    //props: ['item'],
     data() {
       return {
         slide: 0,
-        sliding: null
+        sliding: null,
+        item: {},
+        loading: false,
       }
     },
     mounted() {
+      this.getItem();
       window.scrollTo(0, 0);
     },
     methods: {
+      getItem() {
+        this.loading = true;
+        RestService.getPortfolioItemByTypeAndId$(this.$route.params.type, this.$route.params.id).then(response => {
+          this.item = response.data[0];
+          this.loading = false;
+        })
+        .catch(error => this.loading = false);
+      },
       onSlideStart(slide) {
         this.sliding = true
       },
@@ -56,6 +75,13 @@
   .item-data {
     margin-top: 1rem; 
     margin-bottom: 1rem; 
+  }
+
+  .spinner-div {
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .item-title {

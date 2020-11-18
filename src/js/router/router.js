@@ -13,7 +13,7 @@ export default new Router({
             component: Home
         },
         {
-            path: '/item',
+            path: '/item/:type/:id',
             name: 'item',
             props: true,
             component: Item

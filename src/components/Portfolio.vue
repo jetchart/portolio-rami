@@ -23,7 +23,7 @@
                             <small>{{item.description}}</small>
                           </div>
                           <div >
-                            <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
+                            <button class="btn button-item" @click="viewItem(item, '3d')">Ingresar</button>
                           </div>
                         </div>
                       </div>
@@ -40,7 +40,7 @@
             <spinner v-else size="sm" variant="light"></spinner>
             <b-collapse id="collapse-ilustracion" class="collapse-card">
                 <div class="row portfolio-item-card " align="center">
-                  <div class="col" v-for="(item, index) in itemsMarketingDigital">
+                  <div class="col" v-for="(item, index) in itemsIlustracion">
                     <div class="card-image responsive-image">
                       <div class="card-content hide">
                         <div>
@@ -51,7 +51,7 @@
                             <small>{{item.description}}</small>
                           </div>
                           <div >
-                            <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
+                            <button class="btn button-item" @click="viewItem(item, 'ilustracion')">Ingresar</button>
                           </div>
                         </div>
                       </div>
@@ -79,7 +79,7 @@
                             <small>{{item.description}}</small>
                           </div>
                           <div >
-                            <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
+                            <button class="btn button-item" @click="viewItem(item, '3d')">Ingresar</button>
                           </div>
                         </div>
                       </div>
@@ -107,7 +107,7 @@
                             <small>{{item.description}}</small>
                           </div>
                           <div >
-                            <button class="btn button-item" @click="viewItem(item)">Ingresar</button>
+                            <button class="btn button-item" @click="viewItem(item, 'motionGraphics')">Ingresar</button>
                           </div>
                         </div>
                       </div>
@@ -143,26 +143,26 @@ export default {
     }
   },
   mounted() {
-    RestService.getPortofolio3d$().then(response => {
+    RestService.getPortofolio3d$(null).then(response => {
       this.items3d = response.data;
       this.loading3d = false;
       })
       .catch(error => this.loading3d = false);
-    RestService.getPortofolioIlustracion$()
+    RestService.getPortofolioIlustracion$(null)
     .then(response => {
       this.itemsIlustracion = response.data;
       this.loadingIlustracion = false;
     })
     .catch(error => this.loadingIlustracion = false);
 
-    RestService.getPortofolioMarketingDigital$()
+    RestService.getPortofolioMarketingDigital$(null)
     .then(response => {
       this.itemsMarketingDigital = response.data;
       this.loadingMarketingDigital = false;
     })
     .catch(error => this.loadingMarketingDigital = false);
 
-    RestService.getPortofolioMotionGraphics$()
+    RestService.getPortofolioMotionGraphics$(null)
     .then(response => {
       this.itemsMotionGraphics = response.data;
       this.loadingMotionGraphics = false;
@@ -170,10 +170,10 @@ export default {
     .catch(error => this.loadingMotionGraphics = false);
   },
   methods: {
-    viewItem(item) {
+    viewItem(item, type) {
       this.$router.push({
         name: "item",
-        params: { item: item, },
+        params: { type: type, id: item.id, },
       });
     },
   },
